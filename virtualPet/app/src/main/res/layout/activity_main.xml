@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Top Area View -->
+
+    <!-- Background Image -->
+
+    <!-- Pet Image -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/topArea"
+        android:layout_width="0dp"
+        android:layout_height="189dp"
+        android:background="#8CB6C9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Health -->
+
+    <ImageView
+        android:id="@+id/imgPet"
+        android:layout_width="148dp"
+        android:layout_height="170dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/pet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Health"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/healthBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="392dp"
+        android:layout_height="23dp"
+        android:max="100"
+        android:progressTint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHealth" />
+
+    <!-- Happiness -->
+    <TextView
+        android:id="@+id/txtHappiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Happiness"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/healthBar" />
+
+    <ProgressBar
+        android:id="@+id/happinessBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="392dp"
+        android:layout_height="23dp"
+        android:max="100"
+        android:progressTint="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHappiness" />
+
+    <!-- Energy -->
+    <TextView
+        android:id="@+id/txtEnergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Energy"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happinessBar" />
+
+    <ProgressBar
+        android:id="@+id/energyBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="392dp"
+        android:layout_height="23dp"
+        android:max="100"
+        android:progressTint="#669EB7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnergy" />
+
+    <!-- Feed Button -->
+    <ImageButton
+        android:id="@+id/btnFeed"
+        android:layout_width="118dp"
+        android:layout_height="109dp"
+        android:background="@drawable/button_border"
+        android:contentDescription="Feed"
+        android:scaleType="fitXY"
+        android:src="@drawable/feed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <!-- Play Button -->
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="118dp"
+        android:layout_height="109dp"
+        android:background="@drawable/button_border"
+        android:contentDescription="Play"
+        android:scaleType="fitXY"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <!-- Sleep Button -->
+    <ImageButton
+        android:id="@+id/btnSleep"
+        android:layout_width="118dp"
+        android:layout_height="109dp"
+        android:background="@drawable/button_border"
+        android:contentDescription="Sleep"
+        android:scaleType="fitXY"
+        android:src="@drawable/sleep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
